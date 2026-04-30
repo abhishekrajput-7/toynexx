@@ -893,11 +893,11 @@ function goPage(id){
 
 // ── HOME ──
 const SHELF_DATA = [
-  {id:'p1',name:'Naruto',price:'$149'},
-  {id:'p3',name:'GT-R',price:'$120'},
-  {id:'p2',name:'Iron Man',price:'$289'},
-  {id:'p4',name:'Goku UI',price:'$399'},
-  {id:'p10',name:'Luffy G5',price:'$340'},
+  {id:'p1',name:'Naruto',price:'₹149'},
+  {id:'p3',name:'GT-R',price:'₹120'},
+  {id:'p2',name:'Iron Man',price:'₹289'},
+  {id:'p4',name:'Goku UI',price:'₹399'},
+  {id:'p10',name:'Luffy G5',price:'₹340'},
 ];
 const CATS_DATA = [
   {key:'anime',label:'Anime',icon:'🎌',color:'#b845f5',count:'480+ figures',img:'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=150&q=80'},
@@ -956,8 +956,8 @@ function prodCard(p, idx=0){
       <div class="prod-stars">${stars} <span>(${p.rCount||0})</span></div>
       <div class="prod-foot">
         <div style="display:flex;align-items:baseline;gap:0">
-          <span class="prod-price">$${p.price}</span>
-          ${p.orig?`<span class="prod-orig">$${p.orig}</span>`:''}
+          <span class="prod-price">₹${p.price}</span>
+          ${p.orig?`<span class="prod-orig">₹${p.orig}</span>`:''}
         </div>
         <button class="prod-add-sm" onclick="event.stopPropagation();addToCart('${p.id}')" aria-label="Quick add">+</button>
       </div>
@@ -1076,9 +1076,9 @@ function renderDetail(p){
       <span style="color:rgba(255,255,255,.32);font-family:'Exo 2',sans-serif;font-size:.8rem">(${p.rCount} reviews)</span>
     </div>
     <div class="d-price-row">
-      <span class="d-price">$${p.price}</span>
-      ${p.orig?`<span class="d-orig">$${p.orig}</span>`:''}
-      ${disc?`<span class="d-save">Save $${p.orig-p.price}</span>`:''}
+      <span class="d-price">₹${p.price}</span>
+      ${p.orig?`<span class="d-orig">₹${p.orig}</span>`:''}
+      ${disc?`<span class="d-save">Save ₹${p.orig-p.price}</span>`:''}
     </div>
     <p class="d-desc">${p.desc}</p>
     <div class="d-specs">
@@ -1543,7 +1543,7 @@ function renderAdminTab(tab){
       ${[...S.products].sort((a,b)=>b.sold-a.sold).slice(0,5).map(p=>`<div style="display:flex;align-items:center;gap:12px;padding:9px;border-bottom:1px solid rgba(255,255,255,.04)">
         <img src="${(PROD_IMGS[p.id]||[])[0]}" alt="${p.name}" style="width:38px;height:38px;border-radius:8px;object-fit:cover" onerror="this.style.display='none'"/>
         <span style="flex:1;font-family:'Exo 2',sans-serif;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</span>
-        <span style="font-family:'Orbitron',sans-serif;color:#ffd700;font-size:.82rem;flex-shrink:0">$${p.price}</span>
+        <span style="font-family:'Orbitron',sans-serif;color:#ffd700;font-size:.82rem;flex-shrink:0">₹${p.price}</span>
         <span style="font-size:.72rem;color:rgba(255,255,255,.35);font-family:'Exo 2',sans-serif;flex-shrink:0">${p.sold} sold</span>
       </div>`).join('')}
     </div>`;
@@ -1554,7 +1554,7 @@ function renderAdminTab(tab){
     ${S.products.map(p=>`<tr>
       <td><div style="display:flex;align-items:center;gap:10px"><img src="${(PROD_IMGS[p.id]||[])[0]}" style="width:36px;height:36px;border-radius:6px;object-fit:cover" onerror="this.style.display='none'"/><span>${p.name}</span></div></td>
       <td><span style="text-transform:capitalize;color:${p.color||'#b845f5'}">${p.cat}</span></td>
-      <td><span style="font-family:'Orbitron',sans-serif;color:#ffd700">$${p.price}</span></td>
+      <td><span style="font-family:'Orbitron',sans-serif;color:#ffd700">₹${p.price}</span></td>
       <td><span style="color:${p.stock<10?'#ff2d78':'#22c55e'}">${p.stock}</span></td>
       <td>${p.sold}</td>
       <td><div style="display:flex;gap:6px"><button class="tbl-btn tbl-edit" onclick="openProdModal('${p.id}')">Edit</button><button class="tbl-btn tbl-del" onclick="delProd('${p.id}')">Delete</button></div></td>
