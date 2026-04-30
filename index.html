@@ -82,11 +82,12 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .char-side{position:absolute;bottom:0;display:flex;align-items:flex-end;z-index:5}
 .char-left{left:0;animation:slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both}
-/* FIX OVERLAP */
+
+/* parent */
 .char-left{
+  position: relative;
   left: 0;
   animation: slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both;
-  position: relative;
 }
 
 /* Ironman (peeche) */
@@ -98,11 +99,12 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 /* Batman (aage) */
 .char-left img:last-child{
   position: absolute;
-  left: 20px;
+  left: 60px;   /* 🔥 isko adjust kar */
   bottom: 0;
   z-index: 2;
-  transform: scale(1.12);
+  transform: scale(1.15);
 }
+
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
 @keyframes slideR{from{transform:translateX(110%)}to{transform:none}}
@@ -478,7 +480,7 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
     <!-- Left chars -->
     <div class="char-side char-left">
       <img class="char-img" src="ironman.png" alt="Iron Man figure" style="animation-delay:0s"/>
-      <img class="char-img" src="batman.png" alt="Batman figure" style="position:absolute;left:120px;bottom:0;z-index:2;height:clamp(120px,16vw,220px);"/>
+      <img class="char-img" src="batman.png" alt="Batman figure"/>
     </div>
     <!-- Right chars -->
     <div class="char-side char-right">
