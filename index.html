@@ -82,6 +82,27 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .char-side{position:absolute;bottom:0;display:flex;align-items:flex-end;z-index:5}
 .char-left{left:0;animation:slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both}
+/* FIX OVERLAP */
+.char-left{
+  left: 0;
+  animation: slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both;
+  position: relative;
+}
+
+/* Ironman (peeche) */
+.char-left img:first-child{
+  position: relative;
+  z-index: 1;
+}
+
+/* Batman (aage) */
+.char-left img:last-child{
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  z-index: 2;
+  transform: scale(1.05);
+}
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
 @keyframes slideR{from{transform:translateX(110%)}to{transform:none}}
