@@ -161,6 +161,8 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
     drop-shadow(0 0 100px rgba(255,215,0,.2));
 }
 
+/* Naruto ( RIGHT SIDE MIDDLE ) */
+
 .naruto{
   position: absolute;
   right: 5px;
@@ -177,6 +179,28 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
     drop-shadow(0 0 30px rgba(255,140,0,.6))
     drop-shadow(0 0 60px rgba(255,140,0,.4))
     drop-shadow(0 0 100px rgba(255,140,0,.2));
+}
+
+/* Tanjiro (BACK MOST) */
+
+.tanjiro{
+  position: absolute;
+  right: 10px;     /* 👈 adjust kar sakta hai */
+  bottom: -10;
+
+  z-index: 0;       /* 👈 sabse peeche */
+
+  height: clamp(320px,40vw,600px);
+
+  transform: scale(0.9);
+
+  opacity: 0.85;
+
+  animation: slideR 1.3s 1.5s cubic-bezier(.23,1,.32,1) both;
+
+  filter:
+    drop-shadow(0 0 20px rgba(0,255,150,.4))
+    drop-shadow(0 0 50px rgba(0,255,150,.2));
 }
 
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
@@ -623,11 +647,22 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
     </div>
     <!-- Right chars -->
     <div class="char-side char-right">
-      <img class="char-img goku" src="goku.png" />
-     <img class="char-img naruto" src="naruto.png" />
-    </div>
 
-    <div class="hero-center">
+      <!-- Goku -->
+
+      <img class="char-img goku" src="goku.png" />
+
+      <!-- Naruto 
+       -->
+     <img class="char-img naruto" src="naruto.png" />
+
+     <!-- Tanjiro (BACK MOST) -->
+
+     <img class="char-img tanjiro" src="tanjiro.png" /> 
+
+   </div>
+
+     <div class="hero-center">
       <h1 class="hero-logo">TOYNEXX</h1>
       <p class="hero-tag">Where <span style="color:#ff2d78;text-shadow:0 0 10px #ff2d78">Legends</span> Become Collectibles</p>
 
