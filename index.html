@@ -144,11 +144,15 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 /* Goku (RIGHT SIDE FRONT) */
 
 .goku{
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  right: 140px;  
+  bottom: 0;
+
+  z-index: 1;
 
   height: clamp(350px,45vw,650px);
-  transform: translateX(-20px);
+
+  transform: scale(1);
 
   filter:
     drop-shadow(0 0 30px rgba(255,215,0,.6))
