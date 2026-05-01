@@ -160,6 +160,23 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
     drop-shadow(0 0 100px rgba(255,215,0,.2));
 }
 
+.naruto{
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+
+  z-index: 2;
+
+  height: clamp(350px,45vw,650px);
+
+  transform: scale(1.05);
+
+  filter:
+    drop-shadow(0 0 30px rgba(255,140,0,.6))
+    drop-shadow(0 0 60px rgba(255,140,0,.4))
+    drop-shadow(0 0 100px rgba(255,140,0,.2));
+}
+
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
 @keyframes slideR{from{transform:translateX(110%)}to{transform:none}}
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
@@ -605,7 +622,7 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
     <!-- Right chars -->
     <div class="char-side char-right">
       <img class="char-img goku" src="goku.png" />
-      <img class="char-img" src="https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=260&q=80" alt="Collector figure" style="height:clamp(110px,15vw,200px);animation-delay:.5s;filter:drop-shadow(0 0 22px rgba(255,45,120,.4))"/>
+     <img class="char-img naruto" src="naruto.png" />
     </div>
 
     <div class="hero-center">
