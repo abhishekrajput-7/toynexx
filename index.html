@@ -91,19 +91,18 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 /* Ironman (FRONT) */
 .char-left img:nth-child(2){
   position: relative;
-  z-index: 2;                 
+  z-index: 2;
   transform: translateX(-20px);
   animation: slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both;
 }
 
 /* Batman (BACK) */
-.char-left img:last-child(3){
+.char-left img:nth-child(3){
   position: absolute;
   left: 10px;
   bottom: 10px;
-  z-index: 1;                 
-  transform: scale(1.08);  
-  
+  z-index: 1;
+  transform: scale(1.08);
   animation: slideL 1.3s 1s cubic-bezier(.23,1,.32,1) both;
 }
 
