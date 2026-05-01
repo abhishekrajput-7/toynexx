@@ -112,7 +112,6 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   left: -100px;           
   bottom: -250px;
   z-index: 0;             
-
   height: clamp(700px, 60vw, 1000px);
   width: auto;
 
@@ -120,6 +119,10 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   pointer-events: none;
 
   animation: slideL 1.5s 1.5s cubic-bezier(.23,1,.32,1) both;
+  filter:
+   drop-shadow(0 0 30px rgba(0,212,255,.6))
+   drop-shadow(0 0 60px rgba(0,212,255,.4))
+   drop-shadow(0 0 100px rgba(0,212,255,.2));
 }
 
 /* Spiderman (top-left) */
@@ -131,6 +134,10 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   z-index: 5;
   pointer-events: none;
   animation: slideTop 1.5s ease-out;
+  filter:
+    drop-shadow(0 0 30px rgba(0,212,255,.6))
+    drop-shadow(0 0 60px rgba(0,212,255,.4))
+    drop-shadow(0 0 100px rgba(0,212,255,.2));
 }
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
