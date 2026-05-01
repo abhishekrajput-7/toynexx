@@ -130,7 +130,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   position: absolute;
   top: 0;
   left: 0;
-  width: 550px;   /* bada */
+  width: 550px;   
   z-index: 5;
   pointer-events: none;
   animation: slideTop 1.5s ease-out;
@@ -145,7 +145,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
 .char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 30px rgba(184,69,245,.5));;filter:drop-shadow(0 0 30px rgba(184,69,245,.5))}
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(0,212,255,.4))}
-@media(max-width:900px){.char-side{display:none}}
+
 .scroll-hint{margin-top:38px;animation:fadeUp .8s 2s both;display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-mouse{width:22px;height:36px;border:2px solid rgba(255,255,255,.14);border-radius:11px;display:flex;justify-content:center;padding-top:6px}
 .scroll-dot{width:3px;height:8px;border-radius:2px;background:#b845f5;animation:scrollDot 1.5s ease-in-out infinite}
@@ -460,6 +460,47 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   .d-btns{flex-direction:column}
   .co-grid{grid-template-columns:1fr}
 }
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+@media(max-width:900px){
+
+  #hero{
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+
+  .char-left{
+    left: -80px;
+  }
+
+  .superman{
+    bottom: -100px;
+  }
+
+  .spiderman-img{
+    width: 260px;
+    top: -10px;
+    left: -10px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  #hero{
+    transform: scale(0.6);
+  }
+
+}
+
+@media(max-width:600px){
+
+  #hero{
+    transform: scale(0.6);
+  }
+
+}
+
 </style>
 </head>
 <body>
