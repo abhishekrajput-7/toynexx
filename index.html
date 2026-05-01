@@ -110,11 +110,11 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 /* Spiderman (top-left) */
 .spiderman-img{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 220px;
-  z-index: 20;
-  pointer-events: none;
+   top: -40px;    
+   left: -30px;    
+   width: 320px;  
+   z-index: 50;
+   pointer-events: none;
 }
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
@@ -488,12 +488,13 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   <!-- HERO -->
   <section id="hero">
-    <!-- Left chars -->
-    <div class="char-side char-left">
 
-      <!-- Spiderman TOP -->
+     <!-- Spiderman TOP -->
 
      <img src="spiderman.png" class="spiderman-img" />
+
+     <!-- Left chars -->
+     <div class="char-side char-left">
 
       <!-- Ironman -->
 
