@@ -460,35 +460,53 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   .d-btns{flex-direction:column}
   .co-grid{grid-template-columns:1fr}
 }
-/* ===== MOBILE RESPONSIVE FIX ===== */
+/* ===== MOBILE RESPONSIVE ===== */
 
 @media(max-width:900px){
 
   #hero{
-    transform: scale(0.75);
-    transform-origin: top left;
+    padding: 120px 20px 40px;
   }
 
-  .char-left{
-    left: -80px;
+  .char-img{
+    height: 260px;
   }
 
   .superman{
-    bottom: -100px;
+    height: 400px;
+    left: -60px;
+    bottom: -60px;
+  }
+
+  .batman{
+    left: 10px;
+  }
+
+  .ironman{
+    transform: translateX(-10px);
   }
 
   .spiderman-img{
-    width: 260px;
-    top: -10px;
-    left: -10px;
+    width: 220px;
+    top: -20px;
+    left: -20px;
   }
 
 }
 
 @media(max-width:600px){
 
-  #hero{
-    transform: scale(0.6);
+  .char-img{
+    height: 200px;
+  }
+
+  .superman{
+    height: 320px;
+    bottom: -40px;
+  }
+
+  .spiderman-img{
+    width: 180px;
   }
 
 }
