@@ -93,6 +93,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   position: relative;
   z-index: 2;                 
   transform: translateX(-20px);
+  animation: slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both;
 }
 
 /* Batman (BACK) */
@@ -101,7 +102,9 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
   left: 10px;
   bottom: 10px;
   z-index: 1;                 
-  transform: scale(1.05);     
+  transform: scale(1.08);  
+  
+  animation: slideL 1.3s 2s cubic-bezier(.23,1,.32,1) both;
 }
 
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
