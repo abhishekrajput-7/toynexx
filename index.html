@@ -38,8 +38,8 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 #bgc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
 /* ── NAV ── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
-#nav.scrolled{background:rgba(6,3,15,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(184,69,245,.12);padding:10px 5%}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s;background:rgba(6,3,15,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(184,69,245,.12)}
+#nav.scrolled{background:rgba(6,3,15,.99);backdrop-filter:blur(24px);border-bottom:1px solid rgba(184,69,245,.18);padding:10px 5%}
 .logo{font-family:'Orbitron',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:4px;background:linear-gradient(90deg,#b845f5,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;user-select:none}
 .nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-family:'Exo 2',sans-serif;cursor:pointer;transition:color .25s;white-space:nowrap}
@@ -550,17 +550,18 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 @media(max-width:900px){
 
   #hero{
-    padding: 120px 20px 40px;
+    padding: 100px 16px 320px;
+    min-height: 100vh;
   }
 
   .char-img{
-    height: 260px;
+    height: 200px;
   }
 
   .superman{
-    height: 400px;
-    left: -60px;
-    bottom: -60px;
+    height: 260px;
+    left: -30px;
+    bottom: -30px;
   }
 
   .batman{
@@ -568,30 +569,68 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   }
 
   .ironman{
-    transform: translateX(-10px);
+    transform: translateX(-6px);
   }
 
   .spiderman-img{
-    width: 220px;
-    top: -2px;
-    left: -2px;
+    width: 160px;
+    top: 60px;
+    left: 0px;
+  }
+
+  .goku{
+    height: 220px;
+  }
+
+  .naruto{
+    height: 200px;
+  }
+
+  .tanjiro{
+    height: 180px;
+  }
+
+  .luffy{
+    height: 170px;
   }
 
 }
 
 @media(max-width:600px){
 
+  #hero{
+    padding: 90px 12px 280px;
+  }
+
   .char-img{
-    height: 200px;
+    height: 160px;
   }
 
   .superman{
-    height: 320px;
-    bottom: -40px;
+    height: 200px;
+    bottom: -20px;
+    left: -20px;
   }
 
   .spiderman-img{
-    width: 180px;
+    width: 120px;
+    top: 60px;
+  }
+
+  .goku{
+    height: 180px;
+  }
+
+  .naruto{
+    height: 165px;
+  }
+
+  .tanjiro{
+    height: 150px;
+  }
+
+  .luffy{
+    height: 145px;
   }
 
 }
