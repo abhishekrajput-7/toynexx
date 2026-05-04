@@ -13,15 +13,17 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --p:#b845f5;--b:#00d4ff;--pk:#ff2d78;--g:#ffd700;
-  --dk:#06030f;--dk2:#0c061c;--dk3:#120a28;
-  --glass:rgba(12,6,28,.88);
-  --border:rgba(184,69,245,.18);
-  --gp:0 0 20px rgba(184,69,245,.5),0 0 50px rgba(184,69,245,.2);
-  --gb:0 0 20px rgba(0,212,255,.5),0 0 50px rgba(0,212,255,.2);
+  --p:#d4af37;   /* main gold */
+  --b:#ffd700;   /* bright gold */
+  --pk:#c5a200;  /* deep gold */
+  --g:#fff3b0;   /* soft gold */
+
+  --dk:#050505;
+  --dk2:#0a0a0a;
+  --dk3:#111;
 }
 html{scroll-behavior:smooth}
-body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-x:hidden;overflow-y:auto;min-height:100vh}
+body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;font-family:'Rajdhani',sans-serif;overflow-x:hidden;overflow-y:auto;min-height:100vh;}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--dk)}
 ::-webkit-scrollbar-thumb{background:var(--p);border-radius:4px}
@@ -59,7 +61,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 /* ── HERO ── */
  #hero{height:100dvh;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;padding:0 5%;}
 .hero-center{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:10;}
-.hero-logo{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,10vw,7.5rem);font-weight:900;letter-spacing:8px;background:linear-gradient(135deg,#fff 0%,#b845f5 40%,#00d4ff 70%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 40px rgba(184,69,245,.55));line-height:1;animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both}
+.hero-logo{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,10vw,7.5rem);font-weight:900;letter-spacing:8px;background:linear-gradient(90deg, #d4af37, #ffd700, #fff3b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 40px rgba(184,69,245,.55));line-height:1;animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both}
 @keyframes logoIn{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
 .hero-tag{font-family:'Exo 2',sans-serif;font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin:8px 0 34px;animation:fadeUp .8s .5s both}
 .hero-shelf{display: none;width:min(520px,88vw);background:linear-gradient(180deg,rgba(18,8,42,.94),rgba(10,4,22,.97));border:1px solid rgba(184,69,245,.22);border-radius:16px;padding:28px 20px 18px;position:relative;overflow:hidden;animation:shelfIn 1.2s .7s cubic-bezier(.23,1,.32,1) both;box-shadow:0 0 0 1px rgba(0,212,255,.06),0 24px 70px rgba(0,0,0,.8),0 0 80px rgba(184,69,245,.1)}
@@ -234,7 +236,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 @keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
 @keyframes slideR{from{transform:translateX(110%)}to{transform:none}}
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
-.char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 30px rgba(184,69,245,.5));}
+.char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 25px rgba(255,215,0,0.5));}
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(0,212,255,.4))}
 
 .scroll-hint{margin-top:38px;animation:fadeUp .8s 2s both;display:none;flex-direction:column;align-items:center;gap:8px}
@@ -243,7 +245,7 @@ body{background:var(--dk);color:#fff;font-family:'Rajdhani',sans-serif;overflow-
 @keyframes scrollDot{0%,100%{opacity:1;transform:translateY(0)}50%{opacity:.3;transform:translateY(8px)}}
 
 /* ── BUTTONS ── */
-.btn-p{padding:14px 38px;background:linear-gradient(135deg,#b845f5,#00d4ff);border:none;color:#fff;font-family:'Orbitron',sans-serif;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;cursor:pointer;border-radius:8px;transition:all .3s;position:relative;overflow:hidden}
+.btn-p{padding:14px 38px;background:linear-gradient(135deg,#d4af37,#ffd700);border:none;color:black;;font-family:'Orbitron',sans-serif;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;cursor:pointer;border-radius:8px;transition:all .3s;position:relative;overflow:hidden}
 .btn-p:hover{opacity:.88;box-shadow:0 0 35px rgba(184,69,245,.65);transform:translateY(-2px)}
 .btn-p:active{transform:translateY(0) scale(.98)}
 .btn-p:disabled{opacity:.45;cursor:not-allowed;transform:none}
