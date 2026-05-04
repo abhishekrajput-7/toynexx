@@ -1203,7 +1203,11 @@ function initCursor(){
 function initCanvas(){
   const c=document.getElementById('bgc'),ctx=c.getContext('2d');let W,H,pts=[],streaks=[];
   const rz=()=>{W=c.width=window.innerWidth;H=c.height=window.innerHeight;};rz();window.addEventListener('resize',rz);
-  const COLS=['var(--p)','var(--b)','var(--pk)'];
+ const COLS = [
+  'rgba(255,215,0,0.8)',   // gold
+  'rgba(255,223,100,0.7)', // light gold
+  'rgba(212,175,55,0.6)'   // deep gold
+];
   for(let i=0;i<120;i++)pts.push({x:Math.random()*3000,y:Math.random()*2000,r:Math.random()*1.4+.3,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12-.05,a:Math.random()*.35+.08,c:COLS[i%3]});
   for(let i=0;i<8;i++)streaks.push({x:Math.random()*2000,y:Math.random()*1500,len:Math.random()*120+60,sp:Math.random()*1.2+.35,a:Math.random()*.15+.04,c:COLS[i%3],ang:Math.random()*Math.PI*2});
   const BLOBS=[{x:.14,y:.3,r:320,c:'rgba(255,215,0,.035)'},{x:.86,y:.7,r:270,c:'rgba(255,215,0,.03)'},{x:.5,y:.5,r:360,c:'rgba(212,175,55,.018)'}];
