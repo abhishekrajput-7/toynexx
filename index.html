@@ -1243,21 +1243,57 @@ function initCanvas(){
 }
 
 // ── PAGE ROUTER ──
+
 function goPage(id){
+
+  history.pushState({page:id},"","#"+id);
+
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  
   const pg=document.getElementById(id+'-page');
+
   if(!pg)return;
+
   pg.classList.add('active');
+  
   window.scrollTo({top:0,behavior:'instant'});
+
   if(id==='products')renderProductsPage();
+
   if(id==='checkout')renderCheckout();
+
   if(id==='orders'){if(!S.user){openAuth();return;}renderOrders();}
+
   if(id==='dashboard'){if(!S.user){openAuth();return;}renderDashboard();}
+
   if(id==='admin'){
     if(!S.user||S.user.role!=='admin'){toast('Admin access only','err');openAuth();return;}
     renderAdminTab(S.adminTab);
   }
+
 }
+
+
+/* 🔥 BACK BUTTON FIX */
+
+window.onpopstate=function(event){
+
+  if(event.state && event.state.page){
+
+    document.querySelectorAll('.page')
+    .forEach(p=>p.classList.remove('active'));
+
+    const pg=document.getElementById(
+      event.state.page+'-page'
+    );
+
+    if(pg){
+      pg.classList.add('active');
+    }
+
+  }
+
+};
 
 // ── HOME ──
 const SHELF_DATA = [
