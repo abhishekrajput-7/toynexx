@@ -1278,6 +1278,13 @@ function goPage(id){
 
 window.onpopstate=function(event){
 
+  if(document.getElementById('cart-dr').classList.contains('open')){
+
+closeCart();
+return;
+
+}
+
   if(event.state && event.state.page){
 
     document.querySelectorAll('.page')
@@ -1574,7 +1581,7 @@ function updateCartBadge(){
   const count=S.cart.reduce((a,i)=>a+i.qty,0);
   const b=document.getElementById('cart-badge');if(b){b.style.display=count?'flex':'none';b.textContent=count;}
 }
-function openCart(){document.getElementById('cart-ov').classList.add('open');document.getElementById('cart-dr').classList.add('open');renderCartDrawer();}
+function openCart(){history.pushState({cart:true},"","#cart");document.getElementById('cart-ov').classList.add('open');document.getElementById('cart-dr').classList.add('open');renderCartDrawer();}
 function closeCart(){document.getElementById('cart-ov').classList.remove('open');document.getElementById('cart-dr').classList.remove('open');}
 
 function renderCartDrawer(){
