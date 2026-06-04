@@ -176,7 +176,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 .attack-img{
   position:absolute;
 
-  top:10px;
+  top:0px;
 
   right:250px;
 
@@ -188,7 +188,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 
   animation:
     slideTop 1.5s ease-out,
-    swingAttack 5s ease-in-out infinite 1.5s;
+    flyAttack 4s ease-in-out infinite 1.5s;
 
   transform-origin: top center;
 
@@ -286,7 +286,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 @keyframes slideR{from{transform:translateX(60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
 @keyframes swingSpider{0%{transform: rotate(-10deg);}50%{transform: rotate(10deg);}100%{transform: rotate(-10deg);}}
-@keyframes swingAttack{0%{transform:rotate(8deg);}50%{transform:rotate(-8deg);}100%{transform:rotate(8deg);}}
+@keyframes flyAttack{0%{transform:translateY(0px) translateX(0px) rotate(-3deg);}25%{transform:translateY(-8px) translateX(4px) rotate(2deg);}50%{transform:translateY(-15px) translateX(0px) rotate(0deg);}75%{transform:translateY(-8px) translateX(-4px) rotate(-2deg);}100%{transform:translateY(0px) translateX(0px) rotate(-3deg);}}
 .char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 25px rgba(255,215,0,0.5));}
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(255,215,0,.4))}
 
