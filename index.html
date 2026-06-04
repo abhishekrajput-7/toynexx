@@ -156,10 +156,14 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
   position: absolute;
   top: -3px;
   left: 0px;
-  width: 550px;   
+  width: 750px;   
   z-index: 5;
   pointer-events: none;
-  animation: slideTop 1.5s ease-out;
+  transform-origin: top center;
+  animation:
+  slideTop 1.5s ease-out,
+  swingSpider 4s ease-in-out infinite 1.5s;
+
   filter:
     drop-shadow(0 0 30px rgba(255,215,0,.6))
     drop-shadow(0 0 60px rgba(255,215,0,.4))
@@ -255,6 +259,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 @keyframes slideL{from{transform:translateX(-60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 @keyframes slideR{from{transform:translateX(60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
+@keyframes swingSpider{0%{transform: rotate(-10deg);}50%{transform: rotate(10deg);}100%{transform: rotate(-10deg);}}
 .char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 25px rgba(255,215,0,0.5));}
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(255,215,0,.4))}
 
@@ -665,10 +670,11 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   /* SPIDERMAN */
 
-  .spiderman-img{
-    width: 140px;
-    top: 0;
-  }
+ .spiderman-img{
+  width: 180px;
+  top: 0;
+  left: 20px;
+}
 
   /* 🔥 TOYNEXX TEXT KO UPAR LAO (ONLY MOBILE) */
 
