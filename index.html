@@ -127,7 +127,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
   bottom: 0;
   z-index: 1;
   transform: scale(1.1);
-  animation: slideL 1.3s 1.4s cubic-bezier(.23,1,.32,1) both;
+  animation: slideL 1.6s 1.4s ease-out both;
 }
 
 /* Superman (BACK MOST) */
@@ -143,7 +143,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
   opacity: 1;          
   pointer-events: none;
 
-  animation: slideL 1.3s 2s cubic-bezier(.23,1,.32,1) both;
+  animation: slideL 1.8s 2s ease-out both;
   filter:
    drop-shadow(0 0 30px rgba(255,215,0,.6))
    drop-shadow(0 0 60px rgba(255,215,0,.4))
@@ -222,7 +222,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 
   opacity: 1;
 
-  animation: slideR 1.3s 1.4s cubic-bezier(.23,1,.32,1) both;
+  animation: slideR 1.6s 1.4s ease-out both;
 
   filter:
     drop-shadow(0 0 20px rgba(0,255,150,.4))
@@ -245,15 +245,15 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 
   opacity: 1;
 
- animation: slideR 1.3s 2s cubic-bezier(.23,1,.32,1) both;
+  animation: slideR 1.8s 2s ease-out both;
 
   filter:
     drop-shadow(0 0 20px rgba(255,0,0,.4))
     drop-shadow(0 0 50px rgba(255,0,0,.2));
 }
 
-@keyframes slideL{from{transform:translateX(-110%)}to{transform:none}}
-@keyframes slideR{from{transform:translateX(110%)}to{transform:none}}
+@keyframes slideL{from{transform:translateX(-60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
+@keyframes slideR{from{transform:translateX(60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 @keyframes slideTop{from{transform: translateY(-120%);opacity: 0;}to{transform: translateY(0);opacity: 1;}}
 .char-img{height:clamp(300px,40vw,600px);width:auto;object-fit:contain;filter:drop-shadow(0 0 25px rgba(255,215,0,0.5));}
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(255,215,0,.4))}
