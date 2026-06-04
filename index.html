@@ -95,9 +95,26 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 
 .ironman{
   position: relative;
-  z-index: 2;
+  z-index: 4;
   transform: translateX(-20px);
   animation: slideL 1.3s .3s cubic-bezier(.23,1,.32,1) both;
+}
+
+/* Captain BACK first */
+
+.captain{
+  position:absolute;
+
+  left:90px;
+  bottom:-20px;
+
+  height:clamp(260px,36vw,500px);
+
+  z-index:3;
+
+  filter:
+    drop-shadow(0 0 12px rgba(255,215,0,.25))
+    drop-shadow(0 0 30px rgba(255,215,0,.12));
 }
 
 /* Batman BACK */
@@ -191,7 +208,7 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
 
 /* Tanjiro (BACK MOST) */
 
-.tanjiro{
+.titan{
   position: absolute;
   right: 10px;     /* 👈 adjust kar sakta hai */
   bottom: -10px;
@@ -209,6 +226,25 @@ body{background: radial-gradient(circle at top, #111 0%, #000 70%);color:#fff;fo
   filter:
     drop-shadow(0 0 20px rgba(0,255,150,.4))
     drop-shadow(0 0 50px rgba(0,255,150,.2));
+}
+
+.titan{
+  position:absolute;
+
+  right:15px;
+  bottom:-10px;
+
+  z-index:1;
+
+  height:clamp(320px,40vw,600px);
+
+  transform:scale(.9);
+
+  animation:slideR 1.3s 1.5s cubic-bezier(.23,1,.32,1) both;
+
+  filter:
+    drop-shadow(0 0 20px rgba(255,80,80,.4))
+    drop-shadow(0 0 50px rgba(255,80,80,.2));
 }
 
 /* Luffy (ABSOLUTE BACK MOST) */
@@ -606,6 +642,16 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   bottom: -10px !important;
 }
 
+/* CAPTAIN */
+
+.captain{
+  height:150px !important;
+  left:45px !important;
+  bottom:-10px !important;
+
+  z-index:3;
+}
+
 /* GOKU */
 
 .goku{
@@ -613,18 +659,18 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   right: 10px;
 }
 
-/* NARUTO */
+/* TANJIRO */
 
 .tanjiro{
   height: 150px !important;
   right: 10px;
 }
 
-/* TANJIRO */
+/* TITAN */
 
-.tanjiro{
-  height: 120px !important;
-  right: 30px;
+.titan{
+  height:150px !important;
+  right:10px;
 }
 
 /* LUFFY */
@@ -674,8 +720,10 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   /* 🔥 MOBILE GLOW REDUCE */
 
   .ironman,
+  .captain,
   .batman,
   .superman,
+  
   .goku,
   .tanjiro,
   .titan,
@@ -808,6 +856,10 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
       <!-- Ironman -->
 
       <img class="char-img ironman" src="ironman.png" />
+
+      <!-- Captain -->
+
+      <img class="char-img captain" src="captain.png">
 
       <!-- Batman -->
 
