@@ -756,26 +756,52 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 }
 
 
+/* ===== TOYNEXX MOBILE CATEGORY SLIDER ===== */
+
+@media(max-width:900px){
+
+.mobile-scroll-cats{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:10px 0;
+}
+
+.mobile-scroll-cats::-webkit-scrollbar{
+  display:none;
+}
+
+.scroll-cat{
+
+  flex:none;
+
+  padding:12px 18px;
+
+  border-radius:30px;
+
+  background:rgba(10,5,35,.9);
+
+  border:1px solid rgba(255,215,0,.25);
+
+  color:#ffd700;
+
+  white-space:nowrap;
+
+  font-size:.75rem;
+
+  font-family:'Orbitron',sans-serif;
+
+}
+
+}
+
 
 @media(max-width:900px){
 
   .stats-bar{
-    display:none !important;
+    display:flex !important;
   }
 
-  .mobile-category-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:14px;
-
-    padding:20px;
-
-    margin-top:-250px;
-
-  }
 
   .mobile-card{
 
@@ -1063,53 +1089,30 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   <!-- STATS -->
   <div class="stats-bar">
-    <div style="text-align:center"><div class="stat-num">2,400+</div><div class="stat-lbl">Collectibles</div></div>
-    <div style="text-align:center"><div class="stat-num">150+</div><div class="stat-lbl">Brands</div></div>
-    <div style="text-align:center"><div class="stat-num">98K+</div><div class="stat-lbl">Collectors</div></div>
-    <div style="text-align:center"><div class="stat-num">35+</div><div class="stat-lbl">Countries</div></div>
-  </div>
 
-<!-- MOBILE CATEGORY CARDS -->
+  <div class="mobile-scroll-cats">
 
-<div class="mobile-category-grid">
+  <div class="scroll-cat">Anime Action Figure</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Anime Action Figure</div>
-  </div>
+  <div class="scroll-cat">Katana Collection</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Katana Collection</div>
-  </div>
+  <div class="scroll-cat">Die Cast | Hot Wheels</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Die Cast | Hot Wheels</div>
-  </div>
+  <div class="scroll-cat">Keychains | Watches</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Keychains | Watches</div>
-  </div>
+  <div class="scroll-cat">Bobblehead | Q Posket</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Bobblehead | Q Posket</div>
-  </div>
+  <div class="scroll-cat">Marvel | DC</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Marvel | Dc</div>
-  </div>
+  <div class="scroll-cat">Nostalgia Collection</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Nostalgia Collection</div>
-  </div>
+  <div class="scroll-cat">Other Trending Products</div>
 
-  <div class="mobile-card">
-    <div class="mobile-card-title">Other Trending Products</div>
-  </div>
-
-  <div class="mobile-card full-card">
-    <div class="mobile-card-title">All Products</div>
-  </div>
+  <div class="scroll-cat">All Products</div>
 
 </div>
+
+  </div>
 
   <!-- CATEGORIES -->
   <section class="section">
