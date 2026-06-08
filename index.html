@@ -749,6 +749,80 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   }
 
+/* ===== TOYNEXX MOBILE CATEGORY CARDS ===== */
+
+.mobile-category-grid{
+  display:none;
+}
+
+
+
+@media(max-width:900px){
+
+  .stats-bar{
+    display:none !important;
+  }
+
+  .mobile-category-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    padding:20px;
+
+    margin-top:10px;
+
+  }
+
+  .mobile-card{
+
+    min-height:110px;
+
+    border:1px solid rgba(255,215,0,.35);
+
+    border-radius:18px;
+
+    background:rgba(10,5,35,.9);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:15px;
+
+    box-shadow:
+      0 0 15px rgba(255,215,0,.15);
+
+  }
+
+  .mobile-card-title{
+
+    color:#ffd700;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+  }
+
+  .full-card{
+
+    grid-column:span 2;
+
+  }
+
+}
 
 
 
@@ -994,6 +1068,48 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
     <div style="text-align:center"><div class="stat-num">98K+</div><div class="stat-lbl">Collectors</div></div>
     <div style="text-align:center"><div class="stat-num">35+</div><div class="stat-lbl">Countries</div></div>
   </div>
+
+<!-- MOBILE CATEGORY CARDS -->
+
+<div class="mobile-category-grid">
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Anime Action Figure</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Katana Collection</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Die Cast | Hot Wheels</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Keychains | Watches</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Bobblehead | Q Posket</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Marvel | Dc</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Nostalgia Collection</div>
+  </div>
+
+  <div class="mobile-card">
+    <div class="mobile-card-title">Other Trending Products</div>
+  </div>
+
+  <div class="mobile-card full-card">
+    <div class="mobile-card-title">All Products</div>
+  </div>
+
+</div>
 
   <!-- CATEGORIES -->
   <section class="section">
