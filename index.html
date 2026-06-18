@@ -780,6 +780,14 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   flex:0 0 auto;
 
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center; 
+
   padding:12px 18px;
 
   border-radius:30px;
@@ -799,6 +807,22 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
   font-weight:700;
 
   min-width:max-content;
+
+}
+
+.cat-img-mobile{
+
+  width:55px;
+
+  height:55px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid rgba(255,215,0,.4);
+
+  margin-bottom:8px;
 
 }
 
@@ -1131,7 +1155,14 @@ footer{position:relative;z-index:5;padding:52px 5% 28px;border-top:1px solid rgb
 
   <div class="mobile-scroll-cats">
 
-  <div class="scroll-cat">Anime Action Figure</div>
+
+  <div class="scroll-cat">
+
+  <img src="anime.png" class="cat-img-mobile">
+
+  <span>Anime Action Figure</span>
+
+  </div>
 
   <div class="scroll-cat">Katana Collection</div>
 
