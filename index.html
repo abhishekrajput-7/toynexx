@@ -50,29 +50,7 @@ min-height:100vh;
 /* ── NAV ── */
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s;background:rgba(35,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,.12)}
 #nav.scrolled{background:rgba(50,0,0,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,215,0,.18);padding:10px 5%}
-
-.logo{
-font-family:'Orbitron',sans-serif;
-font-size:1.2rem;
-font-weight:900;
-letter-spacing:2px;
-
-background:#dc2626;
-color:#ffffff;
-
-padding:8px 16px;
-border-radius:4px;
-
-border:2px solid #ffffff;
-
-cursor:pointer;
-user-select:none;
-
--webkit-text-fill-color:#ffffff;
-
-box-shadow:0 4px 15px rgba(220,38,38,.25);
-}
-
+.logo{font-family:'Orbitron',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:4px;background:linear-gradient(90deg,var(--p),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;user-select:none}
 .nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-family:'Exo 2',sans-serif;cursor:pointer;transition:color .25s;white-space:nowrap}
 .nav-links a:hover{color:var(--b)}
@@ -91,7 +69,7 @@ box-shadow:0 4px 15px rgba(220,38,38,.25);
 /* ── HERO ── */
  #hero{height:100dvh;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;padding:0 5%;}
 .hero-center{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:10;}
-.hero-logo{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,10vw,7.5rem);font-weight:900;letter-spacing:8px;background:linear-gradient(90deg, #d4af37, #ffd700, #fff3b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 40px rgba(255,215,0,.55));line-height:1;animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both}
+.hero-logo{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,10vw,7.5rem);font-weight:900;letter-spacing:8px;background:linear-gradient(90deg, #d4af37, #ffd700, #fff3b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 15px rgba(220,38,38,.35));line-height:1;animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both}
 @keyframes logoIn{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
 .hero-tag{font-family:'Exo 2',sans-serif;font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin:8px 0 34px;animation:fadeUp .8s .5s both}
 .hero-shelf{display: none;width:min(520px,88vw);background:linear-gradient(180deg,rgba(20,15,5,.95),rgba(10,8,2,.98));border:1px solid rgba(255,215,0,.22);border-radius:16px;padding:28px 20px 18px;position:relative;overflow:hidden;animation:shelfIn 1.2s .7s cubic-bezier(.23,1,.32,1) both;box-shadow:0 0 0 1px rgba(255,215,0,.06),0 24px 70px rgba(0,0,0,.8),0 0 80px rgba(255,215,0,.1)}
