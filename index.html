@@ -69,8 +69,29 @@ min-height:100vh;
 /* ── HERO ── */
  #hero{height:100dvh;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;padding:0 5%;}
 .hero-center{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:10;}
-.hero-logo{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,10vw,7.5rem);font-weight:900;letter-spacing:8px;background:none; color:#dc2626;-webkit-text-fill-color:#dc2626; -webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 15px rgba(220,38,38,.35));line-height:1;animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both}
-@keyframes logoIn{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
+
+.hero-logo{
+  font-family:'Orbitron',sans-serif;
+  font-size:clamp(3rem,10vw,7.5rem);
+  font-weight:900;
+  letter-spacing:8px;
+
+  color:#dc2626;
+  background:none;
+
+  -webkit-background-clip:unset;
+  -webkit-text-fill-color:#dc2626;
+
+  text-shadow:
+    0 0 10px rgba(220,38,38,.15),
+    0 0 20px rgba(220,38,38,.08);
+
+  filter:none;
+
+  line-height:1;
+
+  animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both;
+}
 .hero-tag{font-family:'Exo 2',sans-serif;font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin:8px 0 34px;animation:fadeUp .8s .5s both}
 .hero-shelf{display: none;width:min(520px,88vw);background:linear-gradient(180deg,rgba(20,15,5,.95),rgba(10,8,2,.98));border:1px solid rgba(255,215,0,.22);border-radius:16px;padding:28px 20px 18px;position:relative;overflow:hidden;animation:shelfIn 1.2s .7s cubic-bezier(.23,1,.32,1) both;box-shadow:0 0 0 1px rgba(255,215,0,.06),0 24px 70px rgba(0,0,0,.8),0 0 80px rgba(255,215,0,.1)}
 @keyframes shelfIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
