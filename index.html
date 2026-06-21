@@ -856,8 +856,12 @@ footer{
 
 .cat-track{
   display:flex;
-  gap:15px;
+  gap:20px;
+
   width:max-content;
+
+  flex-wrap:nowrap;
+
   animation:catLoop 25s linear infinite;
 }
 
@@ -889,12 +893,11 @@ footer{
 
 .mobile-scroll-cats{
   display:flex;
-  gap:15px;
   overflow:hidden;
-  padding:20px;
-  justify-content:flex-start;
-  flex-wrap:nowrap;
-  scrollbar-width:none;
+
+  width:100%;
+
+  padding:0 20px;
 }
 
 .mobile-scroll-cats::-webkit-scrollbar{
@@ -944,56 +947,16 @@ footer{
 }
 
 .stats-bar{
+  width:100%;
   overflow:hidden;
   padding:20px 0;
   background:#6b6877;
+
+  display:block !important;
 }
-  .mobile-card{
+ 
 
-    min-height:110px;
 
-    border:1px solid rgba(220,38,38,.35);
-
-    border-radius:18px;
-
-    background:none;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:15px;
-
-    box-shadow:
-      0 0 15px rgba(220,38,38,.15);
-
-  }
-
-  .mobile-card-title{
-
-    color:#dc2626;
-
-    font-size:.85rem;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-  }
-
-  .full-card{
-
-    grid-column:span 2;
-
-  }
-
-}
 
 
 
