@@ -39,7 +39,13 @@ min-height:100vh;
 
 /* ── CURSOR ── */
 #cur-dot,#cur-ring{position:fixed;border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:opacity .3s}
-#cur-dot{width:8px;height:8px;background:var(--b);box-shadow:0 0 10px var(--b),0 0 20px var(--b)}
+
+#cur-dot{
+  width:8px;
+  height:8px;
+  background:var(--b);
+}
+
 #cur-ring{width:34px;height:34px;border:1.5px solid rgba(220,38,38,.7);transition:width .2s,height .2s,border-color .2s}
 #cur-ring.hov{width:52px;height:52px;border-color:var(--pk)}
 @media(max-width:768px){#cur-dot,#cur-ring{display:none}body{cursor:auto}}
