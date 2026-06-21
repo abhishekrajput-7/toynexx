@@ -48,8 +48,8 @@ min-height:100vh;
 #bgc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
 /* ── NAV ── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s;background:rgba(35,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,.12)}
-#nav.scrolled{background:rgba(50,0,0,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,215,0,.18);padding:10px 5%}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s;background:#111111;backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,.12)}
+#nav.scrolled{background:#0a0a0a;backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,215,0,.18);padding:10px 5%}
 .logo{font-family:'Orbitron',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:4px;background:linear-gradient(90deg,var(--p),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;user-select:none}
 .nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;font-family:'Exo 2',sans-serif;cursor:pointer;transition:color .25s;white-space:nowrap}
@@ -88,8 +88,7 @@ min-height:100vh;
 
   line-height:1;
 
-  box-shadow:
-    0 15px 40px rgba(220,38,38,.18);
+ box-shadow:none;
 
   text-shadow:none;
   filter:none;
@@ -147,9 +146,7 @@ min-height:100vh;
 
   animation: slideL 1.3s .8s cubic-bezier(.23,1,.32,1) both;
 
-  filter:
-    drop-shadow(0 0 12px rgba(255,215,0,.25))
-    drop-shadow(0 0 30px rgba(255,215,0,.12));
+ 
 }
 
 /* Batman BACK */
@@ -178,10 +175,7 @@ min-height:100vh;
   pointer-events: none;
 
   animation: slideL 1.8s 2s ease-out both;
-  filter:
-   drop-shadow(0 0 30px rgba(255,215,0,.6))
-   drop-shadow(0 0 60px rgba(255,215,0,.4))
-   drop-shadow(0 0 100px rgba(255,215,0,.2));
+  
 }
 
 /* Spiderman (top-left) */
@@ -198,10 +192,7 @@ min-height:100vh;
   slideTop 1.5s ease-out,
   swingSpider 4s ease-in-out infinite 1.5s;
 
-  filter:
-    drop-shadow(0 0 30px rgba(255,215,0,.6))
-    drop-shadow(0 0 60px rgba(255,215,0,.4))
-    drop-shadow(0 0 100px rgba(255,215,0,.2));
+ 
 }
 .char-right{right:0;animation:slideR 1.3s .5s cubic-bezier(.23,1,.32,1) both}
 
@@ -226,9 +217,7 @@ min-height:100vh;
 
   transform-origin: top center;
 
-  filter:
-    drop-shadow(0 0 20px rgba(255,215,0,.4))
-    drop-shadow(0 0 40px rgba(255,215,0,.2));
+  
 }
 
 
@@ -246,10 +235,7 @@ min-height:100vh;
   transform: scale(1);
   animation: slideR 1.3s .2s cubic-bezier(.23,1,.32,1) both;
 
-  filter:
-    drop-shadow(0 0 30px rgba(255,215,0,.6))
-    drop-shadow(0 0 60px rgba(255,215,0,.4))
-    drop-shadow(0 0 100px rgba(255,215,0,.2));
+  
 }
 
 /* Tanjiro ( RIGHT SIDE MIDDLE ) */
@@ -265,10 +251,6 @@ min-height:100vh;
 
   transform: scale(1.05);
   animation: slideR 1.3s .8s cubic-bezier(.23,1,.32,1) both;
-  filter:
-    drop-shadow(0 0 30px rgba(255,140,0,.6))
-    drop-shadow(0 0 60px rgba(255,140,0,.4))
-    drop-shadow(0 0 100px rgba(255,140,0,.2));
 }
 
 /* Titan */
@@ -288,9 +270,7 @@ min-height:100vh;
 
   animation: slideR 1.6s 1.4s ease-out both;
 
-  filter:
-    drop-shadow(0 0 20px rgba(0,255,150,.4))
-    drop-shadow(0 0 50px rgba(0,255,150,.2));
+ 
 }
 
 
@@ -311,9 +291,7 @@ min-height:100vh;
 
   animation: slideR 1.8s 2s ease-out both;
 
-  filter:
-    drop-shadow(0 0 20px rgba(255,0,0,.4))
-    drop-shadow(0 0 50px rgba(255,0,0,.2));
+  
 }
 
 @keyframes slideL{from{transform:translateX(-60%);opacity:0;}to{transform:translateX(0);opacity:1;}}
@@ -323,10 +301,7 @@ min-height:100vh;
 @keyframes flyAttack{0%{transform:translateY(0px) translateX(0px) rotate(-3deg);}25%{transform:translateY(-8px) translateX(4px) rotate(2deg);}50%{transform:translateY(-15px) translateX(0px) rotate(0deg);}75%{transform:translateY(-8px) translateX(-4px) rotate(-2deg);}100%{transform:translateY(0px) translateX(0px) rotate(-3deg);}}
 
 .char-img{
-  height:clamp(300px,40vw,600px);
-  width:auto;
-  object-fit:contain;
-  filter:none;
+filter:none !important;
 }
 
 .char-img:nth-child(2){animation-delay:.4s;animation-duration:4s;filter:drop-shadow(0 0 25px rgba(255,215,0,.4))}
