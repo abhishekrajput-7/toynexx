@@ -889,7 +889,9 @@ footer{
   gap:12px;
   overflow-x:auto;
   flex-wrap:nowrap;
-  padding:10px 15px;
+  padding:15px;
+  justify-content:flex-start;
+  scroll-snap-type:x mandatory;
 }
 
 .mobile-scroll-cats::-webkit-scrollbar{
@@ -920,10 +922,11 @@ footer{
 
 @media(max-width:900px){
 
-   .stat-num,
-  .stat-lbl{
+  .stats-bar{
     display:none !important;
   }
+
+}
 
 .stats-bar{
   background:rgba(12,6,28,.65) !important;
