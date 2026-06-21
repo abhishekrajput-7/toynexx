@@ -101,7 +101,13 @@ min-height:100vh;
 
   animation:logoIn 1.2s cubic-bezier(.23,1,.32,1) both;
 }
-.hero-tag{font-family:'Exo 2',sans-serif;font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin:8px 0 34px;animation:fadeUp .8s .5s both}
+.hero-tag{font-family:'Exo 2',sans-serif;font-size:clamp(.8rem,2vw,1.1rem);letter-spacing:5px;text-transform:uppercase;color:#111111; margin:8px 0 34px;animation:fadeUp .8s .5s both}
+
+.hero-tag span{
+  color:#dc2626;
+  font-weight:700;
+}
+
 .hero-shelf{display: none;width:min(520px,88vw);background:linear-gradient(180deg,rgba(20,15,5,.95),rgba(10,8,2,.98));border:1px solid rgba(220,38,38,.22);border-radius:16px;padding:28px 20px 18px;position:relative;overflow:hidden;animation:shelfIn 1.2s .7s cubic-bezier(.23,1,.32,1) both;box-shadow:0 0 0 1px rgba(220,38,38,.06),0 24px 70px rgba(0,0,0,.8),0 0 80px rgba(220,38,38,.1)}
 @keyframes shelfIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 .shelf-glow{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--p),var(--b),transparent)}
@@ -1170,7 +1176,7 @@ footer{
 
      <div class="hero-center">
       <h1 class="hero-logo">TOYNEXX</h1>
-      <p class="hero-tag">Where <span style="color:var(--pk);text-shadow:0 0 10px var(--pk)">Legends</span> Become Collectibles</p>
+      <p class="hero-tag">Where <span>Legends</span> Become Collectibles</p>
 
       <!-- Floating Shelf -->
       <div class="hero-shelf" id="hero-shelf">
