@@ -822,35 +822,58 @@ footer{
 }
 
 .scroll-cat{
+  min-width:240px;
+
+  height:70px;
+
   display:flex;
   align-items:center;
   justify-content:center;
-
-  min-width:180px;
-  height:70px;
-
-  padding:0 20px;
-
-  border-radius:16px;
 
   background:#111111;
 
   border:1px solid rgba(220,38,38,.35);
 
+  border-radius:16px;
+
   color:#ffffff;
 
   font-family:'Orbitron',sans-serif;
-  font-size:.75rem;
-  font-weight:700;
 
-  letter-spacing:1px;
-  text-transform:uppercase;
+  font-size:.75rem;
+
+  font-weight:700;
 
   white-space:nowrap;
 
-  transition:all .3s ease;
-
   cursor:pointer;
+}
+
+.cat-slider{
+  width:100%;
+  overflow:hidden;
+}
+
+.cat-track{
+  display:flex;
+  gap:15px;
+  width:max-content;
+
+  animation:catLoop 35s linear infinite;
+}
+
+.cat-slider:hover .cat-track{
+  animation-play-state:paused;
+}
+
+@keyframes catLoop{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
 }
 
 .scroll-cat:hover{
@@ -922,11 +945,9 @@ footer{
 }
 
 .stats-bar{
-  background:rgba(12,6,28,.65) !important;
-  backdrop-filter:blur(10px) !important;
-  border-top:1px solid rgba(220,38,38,.1) !important;
-  border-bottom:1px solid rgba(220,38,38,.1) !important;
-  padding:10px 0 !important;
+  overflow:hidden;
+  padding:20px 0;
+  background:#6b6877;
 }
   .mobile-card{
 
@@ -1233,6 +1254,19 @@ footer{
 <div class="scroll-cat">Other Trending Products</div>
 
 <div class="scroll-cat">All Products</div>
+
+    <!-- duplicate -->
+      <div class="scroll-cat">Anime Action Figure</div>
+      <div class="scroll-cat">Katana Collection</div>
+      <div class="scroll-cat">Die Cast | Hot Wheels</div>
+      <div class="scroll-cat">Keychains | Watches</div>
+      <div class="scroll-cat">Bobblehead | Q Posket</div>
+      <div class="scroll-cat">Marvel | DC</div>
+      <div class="scroll-cat">Nostalgia Collection</div>
+      <div class="scroll-cat">Other Trending Products</div>
+      <div class="scroll-cat">All Products</div>
+
+    </div>
 
 </div>
 
