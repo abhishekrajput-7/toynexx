@@ -821,40 +821,6 @@ footer{
   display:none;
 }
 
-.mobile-scroll-cats{
-  display:flex;
-  gap:15px;
-
-  overflow-x:auto;
-
-  padding:20px;
-
-  justify-content:center;
-
-  scrollbar-width:none;
-}
-
-.mobile-scroll-cats::-webkit-scrollbar{
-  display:none;
-}
-
-
-/* ===== TOYNEXX MOBILE CATEGORY SLIDER ===== */
-
-@media(max-width:900px){
-
-.mobile-scroll-cats{
-  display:flex;
-  gap:12px;
-  overflow-x:auto;
-  flex-wrap:nowrap;
-  padding:10px 15px;
-}
-
-.mobile-scroll-cats::-webkit-scrollbar{
-  display:none;
-}
-
 .scroll-cat{
   display:flex;
   align-items:center;
@@ -898,6 +864,39 @@ footer{
     0 8px 20px rgba(0,0,0,.25),
     0 0 15px rgba(220,38,38,.15);
 }
+
+.mobile-scroll-cats{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  padding:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  scrollbar-width:none;
+}
+
+.mobile-scroll-cats::-webkit-scrollbar{
+  display:none;
+}
+
+
+/* ===== TOYNEXX MOBILE CATEGORY SLIDER ===== */
+
+@media(max-width:900px){
+
+.mobile-scroll-cats{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  padding:10px 15px;
+}
+
+.mobile-scroll-cats::-webkit-scrollbar{
+  display:none;
+}
+
+
 
 .cat-img-mobile{
 
