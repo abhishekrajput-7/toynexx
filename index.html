@@ -858,8 +858,7 @@ footer{
   display:flex;
   gap:15px;
   width:max-content;
-
-  animation:catLoop 35s linear infinite;
+  animation:catLoop 25s linear infinite;
 }
 
 .cat-slider:hover .cat-track{
@@ -867,11 +866,11 @@ footer{
 }
 
 @keyframes catLoop{
-  from{
+  0%{
     transform:translateX(0);
   }
 
-  to{
+  100%{
     transform:translateX(-50%);
   }
 }
@@ -891,10 +890,10 @@ footer{
 .mobile-scroll-cats{
   display:flex;
   gap:15px;
-  overflow-x:auto;
+  overflow:hidden;
   padding:20px;
-  justify-content:center;
-  flex-wrap:wrap;
+  justify-content:flex-start;
+  flex-wrap:nowrap;
   scrollbar-width:none;
 }
 
@@ -1235,38 +1234,31 @@ footer{
 
 <div class="stats-bar">
 
-<div class="mobile-scroll-cats">
+<div class="cat-track">
 
 <div class="scroll-cat">Anime Action Figure</div>
-
 <div class="scroll-cat">Katana Collection</div>
-
 <div class="scroll-cat">Die Cast | Hot Wheels</div>
-
 <div class="scroll-cat">Keychains | Watches</div>
-
 <div class="scroll-cat">Bobblehead | Q Posket</div>
-
 <div class="scroll-cat">Marvel | DC</div>
-
 <div class="scroll-cat">Nostalgia Collection</div>
-
 <div class="scroll-cat">Other Trending Products</div>
-
 <div class="scroll-cat">All Products</div>
 
-    <!-- duplicate -->
-      <div class="scroll-cat">Anime Action Figure</div>
-      <div class="scroll-cat">Katana Collection</div>
-      <div class="scroll-cat">Die Cast | Hot Wheels</div>
-      <div class="scroll-cat">Keychains | Watches</div>
-      <div class="scroll-cat">Bobblehead | Q Posket</div>
-      <div class="scroll-cat">Marvel | DC</div>
-      <div class="scroll-cat">Nostalgia Collection</div>
-      <div class="scroll-cat">Other Trending Products</div>
-      <div class="scroll-cat">All Products</div>
+<!-- SAME AGAIN -->
 
-    </div>
+<div class="scroll-cat">Anime Action Figure</div>
+<div class="scroll-cat">Katana Collection</div>
+<div class="scroll-cat">Die Cast | Hot Wheels</div>
+<div class="scroll-cat">Keychains | Watches</div>
+<div class="scroll-cat">Bobblehead | Q Posket</div>
+<div class="scroll-cat">Marvel | DC</div>
+<div class="scroll-cat">Nostalgia Collection</div>
+<div class="scroll-cat">Other Trending Products</div>
+<div class="scroll-cat">All Products</div>
+
+</div>
 
 </div>
 
