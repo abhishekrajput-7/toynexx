@@ -616,6 +616,34 @@ textarea.n-in{height:96px;resize:vertical}
 .banner{margin:0 5% 80px;border-radius:18px;padding:clamp(28px,5vw,60px);background:linear-gradient(135deg,rgba(220,38,38,.1),rgba(220,38,38,.06),rgba(212,175,55,.09));border:1px solid rgba(220,38,38,.18);display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;overflow:hidden;position:relative;z-index:5}
 .banner-img{width:clamp(140px,18vw,220px);height:clamp(140px,18vw,220px);object-fit:contain;filter:none !important;(0 0 30px rgba(220,38,38,.5))}
 
+/* ── NEW ARRIVAL ── */
+
+.new-arrival-banner{
+  width:90%;
+  margin:40px auto;
+
+  border-radius:20px;
+  overflow:hidden;
+
+  cursor:pointer;
+
+  border:2px solid rgba(220,38,38,.25);
+
+  transition:.4s;
+}
+
+.new-arrival-banner img{
+  width:100%;
+  display:block;
+}
+
+.new-arrival-banner:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 15px 40px rgba(220,38,38,.25);
+}
+
 /* ── NEWSLETTER ── */
 .nl{position:relative;z-index:5;text-align:center;padding:0 5% 80px}
 .nl-inner{max-width:520px;margin:0 auto}
@@ -1383,9 +1411,16 @@ footer{
 
 </div>
 
- 
+  <!-- NEW ARRIVAL -->
+
+<div class="new-arrival-banner" onclick="goPage('newarrival')">
+
+  <img src="new-arrival.png" alt="New Arrival">
+
+</div> 
 
   <!-- CATEGORIES -->
+
   <section class="section">
     <div class="sec-hd"><div class="sec-title"><span class="grad">Browse</span> Categories</div><div class="sec-line"></div><div class="sec-badge">All Universes</div></div>
     <div class="cat-grid" id="cat-grid"></div>
@@ -1426,6 +1461,16 @@ footer{
       </div>
     </div>
   </div>
+
+<!-- NEW ARRIVAL BANNER -->
+
+<div class="new-arrival-banner"
+onclick="goPage('newarrival')">
+
+<img src="new-arrival.png"
+alt="New Arrival">
+
+</div>
 
   <!-- FOOTER -->
   <footer>
@@ -1475,6 +1520,25 @@ footer{
       </div>
     </div>
   </footer>
+</div>
+
+<div id="newarrival-page" class="page">
+
+<section class="section">
+
+<div class="sec-hd">
+<h2 class="sec-title">
+<span class="grad">NEW</span> ARRIVALS
+</h2>
+<div class="sec-line"></div>
+</div>
+
+<div class="prod-grid" id="new-arrival-grid">
+
+</div>
+
+</section>
+
 </div>
 
 <!-- ════════════ PRODUCTS PAGE ════════════ -->
@@ -1783,6 +1847,8 @@ function goPage(id){
   window.scrollTo({top:0,behavior:'instant'});
 
   if(id==='products')renderProductsPage();
+
+  if(id==='newarrival')renderProductsPage();
 
   if(id==='checkout')renderCheckout();
 
