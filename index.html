@@ -822,8 +822,10 @@ footer{
 }
 
 .scroll-cat{
-    min-width:240px;
-    height:90px;
+    min-width:180px;
+    width:180px;
+
+    height:140px;
 
     display:flex;
     flex-direction:column;
@@ -831,22 +833,26 @@ footer{
     align-items:center;
     justify-content:center;
 
-    gap:8px;
+    gap:10px;
 
     background:#111111;
+
     border:1px solid rgba(220,38,38,.35);
-    border-radius:16px;
+    border-radius:18px;
 
     color:#ffffff;
 
     font-family:'Orbitron',sans-serif;
-    font-size:.75rem;
+    font-size:.72rem;
     font-weight:700;
 
     text-align:center;
-    cursor:pointer;
 
-    padding:10px;
+    padding:12px;
+
+    flex-shrink:0;
+
+    transition:.3s;
 }
 
 .cat-slider{
@@ -934,14 +940,15 @@ footer{
 }
 
 .cat-img{
-    width:50px;
-    height:50px;
+    width:70px;
+    height:70px;
 
     object-fit:contain;
 
     display:block;
-}
 
+    margin-bottom:5px;
+}
 .scroll-cat{
     display:flex;
     flex-direction:column;
