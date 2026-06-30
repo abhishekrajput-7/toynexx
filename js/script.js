@@ -150,8 +150,6 @@ function goPage(id){
 
   if(id==='products')renderProductsPage();
 
-  if(id==='newarrival')renderProductsPage();
-
   if(id==='checkout')renderCheckout();
 
   if(id==='orders'){if(!S.user){openAuth();return;}renderOrders();}
@@ -165,6 +163,17 @@ function goPage(id){
 
 }
 
+function openNewArrival(){
+
+    goPage("products");
+
+    S.filter.cat = "";
+    S.filter.search = "";
+    S.filter.sort = "newest";
+    S.filter.badge = "NEW";
+
+    //applyFilters();
+}
 
 /* 🔥 BACK BUTTON FIX */
 
