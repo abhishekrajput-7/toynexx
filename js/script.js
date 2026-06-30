@@ -172,7 +172,7 @@ function openNewArrival(){
     S.filter.sort = "newest";
     S.filter.badge = "NEW";
 
-    applyFilters();
+    //applyFilters();
 }
 
 /* 🔥 BACK BUTTON FIX */
