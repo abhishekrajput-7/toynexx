@@ -150,7 +150,7 @@ function goPage(id){
 
   if(id==='products')renderProductsPage();
 
-  //if(id==='newarrival')renderProductsPage();
+  if(id==='newarrival')renderProductsPage();
 
   if(id==='checkout')renderCheckout();
 
